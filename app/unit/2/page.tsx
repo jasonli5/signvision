@@ -19,7 +19,7 @@ export default function Page() {
       </div>
       <Link href="/unit/1" className="flex items-center justify-center mt-12">
         <span className="text-lg font-bold underline text-blue-700">
-          Go back to Unit 1: Fingerspelling
+          Go to Beginner Level
         </span>
       </Link>
     </>
