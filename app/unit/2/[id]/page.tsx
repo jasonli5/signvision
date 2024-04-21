@@ -148,6 +148,7 @@ const LearningCard = ({ character, description }: LearningCardProps) => {
         <video
           src={`/videos/${character.toLowerCase()}.mp4`}
           autoPlay
+          muted
           loop
           className="rounded"
           width={600}
@@ -195,6 +196,7 @@ const AttemptCard = ({
             <video
               src={`/videos/${character}.mp4`}
               autoPlay
+              muted
               playsInline
               loop
               width={400}
