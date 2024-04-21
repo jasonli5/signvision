@@ -128,7 +128,7 @@ interface LearningCardProps {
   description: string;
 }
 
-export const LearningCard = ({ character, description }: LearningCardProps) => {
+const LearningCard = ({ character, description }: LearningCardProps) => {
   return (
     <div className="p-4 w-[500px] h-full flex justify-center items-center flex-col">
       <h2 className="text-xl font-bold">Letter "{character}"</h2>
@@ -155,7 +155,7 @@ interface AttemptCardProps {
   continueOnClick: () => void;
 }
 
-export const AttemptCard = ({
+const AttemptCard = ({
   videoRef,
   canvasRef,
   label,
@@ -206,7 +206,7 @@ export const AttemptCard = ({
   );
 };
 
-export const ContinueButton = ({
+const ContinueButton = ({
   onClick,
   label = "Continue",
   disabled,
@@ -226,7 +226,7 @@ export const ContinueButton = ({
   );
 };
 
-export const FinishCard = () => {
+const FinishCard = () => {
   return (
     <div className="p-4 w-[400px] h-full flex justify-center items-center">
       <div className="p-4 flex flex-col gap-6 justify-center items-center">
