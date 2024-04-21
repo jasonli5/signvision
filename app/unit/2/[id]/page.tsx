@@ -150,6 +150,8 @@ const LearningCard = ({ character, description }: LearningCardProps) => {
           autoPlay
           muted
           loop
+          playsInline
+          key={character}
           className="rounded"
           width={600}
           height={300}
@@ -200,6 +202,7 @@ const AttemptCard = ({
               playsInline
               loop
               width={400}
+              key={character}
               className="rounded"
             />
             <div className="relative">
