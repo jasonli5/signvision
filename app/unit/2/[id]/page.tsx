@@ -196,7 +196,7 @@ const AttemptCard = ({
           <h2 className="text-xl font-bold">How to sign "{character}"</h2>
           <div className="flex flex-row justify-center items-center gap-4">
             <video
-              src={`/videos/${character}.mp4`}
+              src={`/videos/${character.toLowerCase()}.mp4`}
               autoPlay
               muted
               playsInline
