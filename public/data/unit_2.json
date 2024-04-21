@@ -1,0 +1,111 @@
+[
+  {
+    "lesson": "1",
+    "title": "Introduction to the Course",
+    "model": "u2l1",
+    "description": "Welcome to the course! In this lesson, you will learn how to say hello, thank you, excuse me, sorry, and stop in Chinese.",
+    "content": [
+      {
+        "type": "learn",
+        "character": "Hello",
+        "description": ""
+      },
+      {
+        "type": "attempt",
+        "character": "Hello",
+        "description": ""
+      },
+      {
+        "type": "learn",
+        "character": "Thank you",
+        "description": ""
+      },
+      {
+        "type": "attempt",
+        "character": "Thank you",
+        "description": ""
+      },
+      {
+        "type": "learn",
+        "character": "Excuse me",
+        "description": ""
+      },
+      {
+        "type": "attempt",
+        "character": "Excuse me",
+        "description": ""
+      },
+      {
+        "type": "learn",
+        "character": "Sorry",
+        "description": ""
+      },
+      {
+        "type": "attempt",
+        "character": "Sorry",
+        "description": ""
+      },
+      {
+        "type": "learn",
+        "character": "Stop",
+        "description": ""
+      },
+      {
+        "type": "attempt",
+        "character": "Stop",
+        "description": ""
+      },
+      { "type": "finish" }
+    ]
+  },
+  {
+    "lesson": "2",
+    "title": "",
+    "model": "u2l1",
+    "content": [
+      {
+        "type": "learn",
+        "character": "Hello my name is",
+        "description": ""
+      },
+      {
+        "type": "attempt",
+        "character": "Hello my name is",
+        "description": ""
+      },
+      {
+        "type": "finish"
+      }
+    ]
+  },
+  {
+    "lesson": "3",
+    "title": "",
+    "model": "u2l1",
+    "content": [
+      {
+        "type": "youtube",
+        "character": "What is your name?",
+        "description": "https://www.youtube.com/embed/6pZ_KvSXMOg"
+      },
+      {
+        "type": "youtube",
+        "character": "It is nice to meet you",
+        "description": "https://www.youtube.com/embed/F7Wjb_AIvMA"
+      },
+      {
+        "type": "youtube",
+        "character": "I am learning sign",
+        "description": "https://www.youtube.com/embed/uER7jkJjdic"
+      },
+      {
+        "type": "youtube",
+        "character": "I am fine",
+        "description": "https://www.youtube.com/embed/yJkTW6RWUGU"
+      },
+      {
+        "type": "finish"
+      }
+    ]
+  }
+]

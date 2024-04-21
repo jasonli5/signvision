@@ -4,9 +4,9 @@ import {
   GestureRecognizer,
   NormalizedLandmark,
 } from "@mediapipe/tasks-vision";
-import { RefObject, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
-export const useAICamera = (on: boolean) => {
+export const useAICamera = (on: boolean, model: string) => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [label, setLabel] = useState<string>("");
@@ -21,8 +21,9 @@ export const useAICamera = (on: boolean) => {
 
         gestureRecognizer = await GestureRecognizer.createFromModelPath(
           vision,
-          "/models/gesture_recognizer_asl_3.task"
+          `/models/gesture_recognizer_${model}.task`
         );
+
         await gestureRecognizer.setOptions({
           runningMode: "VIDEO",
           numHands: 2,
@@ -99,6 +100,7 @@ export const useAICamera = (on: boolean) => {
         if (videoRef.current) {
           videoRef.current.srcObject = stream;
         }
+
         await initializeHandDetection();
       } catch (error) {
         console.error("Error starting camera:", error);

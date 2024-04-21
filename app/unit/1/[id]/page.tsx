@@ -8,24 +8,20 @@ import left_arrow from "@/public/icons/left-arrow.svg";
 import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
 
-export default function Page({ params }: { params: { slug: string } }) {
+export const Page = ({ params }: { params: { id: string } }) => {
+  const unit = unitData.find((lesson) => lesson.lesson === params.id);
+
+  if (!unit) return <div>Lesson not found</div>;
+
   const [currentStep, setCurrentStep] = useState(0);
 
-  const [spelling, setSpelling] = useState<string>("");
-  const [toggleHint, setToggleHint] = useState(false);
-
-  const [nameInput, setNameInput] = useState<string>("");
-
-  const unit = unitData.find((lesson) => lesson.lesson === params.slug);
-
-  const content = unit?.content[currentStep];
-  const contentType = content?.type;
+  const content = unit.content[currentStep];
+  const contentType = content.type;
 
   const { label, confidence, videoRef, canvasRef } = useAICamera(
-    contentType === "attempt" || contentType === "spell"
+    contentType === "attempt" || contentType === "spell",
+    "u1"
   );
-
-  if (!unit || !content || !contentType) return <div>Lesson not found</div>;
 
   const onContinue = () => {
     console.log(currentStep, unit.content.length - 1);
@@ -33,6 +29,11 @@ export default function Page({ params }: { params: { slug: string } }) {
       setCurrentStep((prev) => prev + 1);
     }
   };
+
+  const [spelling, setSpelling] = useState<string>("");
+  const [toggleHint, setToggleHint] = useState(false);
+
+  const [nameInput, setNameInput] = useState<string>("");
 
   useEffect(() => {
     setSpelling("");
@@ -113,7 +114,7 @@ export default function Page({ params }: { params: { slug: string } }) {
       {contentType === "spell" && toggleHint && (
         <HintCard
           letter={
-            content.character![spelling.length] === ""
+            content.character != ""
               ? content.character![spelling.length]
               : nameInput[spelling.length]
           }
@@ -121,14 +122,14 @@ export default function Page({ params }: { params: { slug: string } }) {
       )}
     </>
   );
-}
+};
 
 interface LearningCardProps {
   character: string;
   description: string;
 }
 
-const LearningCard = ({ character, description }: LearningCardProps) => {
+export const LearningCard = ({ character, description }: LearningCardProps) => {
   return (
     <div className="p-4 w-[500px] h-full flex justify-center items-center flex-col">
       <h2 className="text-xl font-bold">Letter "{character}"</h2>
@@ -155,7 +156,7 @@ interface AttemptCardProps {
   continueOnClick: () => void;
 }
 
-const AttemptCard = ({
+export const AttemptCard = ({
   videoRef,
   canvasRef,
   label,
@@ -206,7 +207,7 @@ const AttemptCard = ({
   );
 };
 
-const ContinueButton = ({
+export const ContinueButton = ({
   onClick,
   label = "Continue",
   disabled,
@@ -226,7 +227,7 @@ const ContinueButton = ({
   );
 };
 
-const FinishCard = () => {
+export const FinishCard = () => {
   return (
     <div className="p-4 w-[400px] h-full flex justify-center items-center">
       <div className="p-4 flex flex-col gap-6 justify-center items-center">
@@ -346,7 +347,7 @@ const HintCard = ({ letter }: HintCardProps) => {
   if (!letter) return null;
 
   return (
-    <div className="p-4 flex flex-col gap-3 justify-center items-center">
+    <div className="p-4 flex flex-col gap-3 justify-center items-center absolute right-[100px] top-[35%]">
       <h2 className="text-xl font-bold">Hint</h2>
       <img
         src={`/sign_images/${letter.toLowerCase()}.png`}
@@ -379,3 +380,5 @@ const InputCard = ({ onClick, setNameInput }: InputCardProps) => {
     </div>
   );
 };
+
+export default Page;
