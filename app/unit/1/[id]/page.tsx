@@ -40,7 +40,7 @@ export default function Page({ params }: { params: { id: string } }) {
   }, [currentStep]);
 
   return (
-    <div>
+    <>
       <div className="flex-col w-auto justify-center items-center m-auto py-5 bg-slate-100 rounded-lg shadow-md inline-flex relative">
         <Link href="/unit/1" className="absolute top-4 left-4">
           <img src={left_arrow.src} alt="Go back" className="w-8 h-8" />
@@ -120,7 +120,7 @@ export default function Page({ params }: { params: { id: string } }) {
           }
         />
       )}
-    </div>
+    </>
   );
 }
 
