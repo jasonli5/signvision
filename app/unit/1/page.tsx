@@ -46,7 +46,7 @@ interface LessonButtonProps {
   description: string;
 }
 
-export const LessonButton = ({ lesson, description }: LessonButtonProps) => {
+const LessonButton = ({ lesson, description }: LessonButtonProps) => {
   return (
     <Link
       href={`1/${lesson}`}

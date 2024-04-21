@@ -40,7 +40,7 @@ export const Page = ({ params }: { params: { id: string } }) => {
   }, [currentStep]);
 
   return (
-    <>
+    <div>
       <div className="flex-col w-auto justify-center items-center m-auto py-5 bg-slate-100 rounded-lg shadow-md inline-flex relative">
         <Link href="/unit/1" className="absolute top-4 left-4">
           <img src={left_arrow.src} alt="Go back" className="w-8 h-8" />
@@ -120,7 +120,7 @@ export const Page = ({ params }: { params: { id: string } }) => {
           }
         />
       )}
-    </>
+    </div>
   );
 };
 
@@ -129,7 +129,7 @@ interface LearningCardProps {
   description: string;
 }
 
-export const LearningCard = ({ character, description }: LearningCardProps) => {
+const LearningCard = ({ character, description }: LearningCardProps) => {
   return (
     <div className="p-4 w-[500px] h-full flex justify-center items-center flex-col">
       <h2 className="text-xl font-bold">Letter "{character}"</h2>
@@ -156,7 +156,7 @@ interface AttemptCardProps {
   continueOnClick: () => void;
 }
 
-export const AttemptCard = ({
+const AttemptCard = ({
   videoRef,
   canvasRef,
   label,
@@ -207,7 +207,7 @@ export const AttemptCard = ({
   );
 };
 
-export const ContinueButton = ({
+const ContinueButton = ({
   onClick,
   label = "Continue",
   disabled,
@@ -227,7 +227,7 @@ export const ContinueButton = ({
   );
 };
 
-export const FinishCard = () => {
+const FinishCard = () => {
   return (
     <div className="p-4 w-[400px] h-full flex justify-center items-center">
       <div className="p-4 flex flex-col gap-6 justify-center items-center">
