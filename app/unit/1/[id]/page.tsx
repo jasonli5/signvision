@@ -9,18 +9,23 @@ import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
 
 export const Page = ({ params }: { params: { id: string } }) => {
-  const unit = unitData.find((lesson) => lesson.lesson === params.id);
-
-  if (!unit) return <div>Lesson not found</div>;
-
   const [currentStep, setCurrentStep] = useState(0);
 
-  const content = unit.content[currentStep];
-  const contentType = content.type;
+  const [spelling, setSpelling] = useState<string>("");
+  const [toggleHint, setToggleHint] = useState(false);
+
+  const [nameInput, setNameInput] = useState<string>("");
+
+  const unit = unitData.find((lesson) => lesson.lesson === params.id);
+
+  const content = unit?.content[currentStep];
+  const contentType = content?.type;
 
   const { label, confidence, videoRef, canvasRef } = useAICamera(
     contentType === "attempt" || contentType === "spell"
   );
+
+  if (!unit || !content || !contentType) return <div>Lesson not found</div>;
 
   const onContinue = () => {
     console.log(currentStep, unit.content.length - 1);
@@ -28,11 +33,6 @@ export const Page = ({ params }: { params: { id: string } }) => {
       setCurrentStep((prev) => prev + 1);
     }
   };
-
-  const [spelling, setSpelling] = useState<string>("");
-  const [toggleHint, setToggleHint] = useState(false);
-
-  const [nameInput, setNameInput] = useState<string>("");
 
   useEffect(() => {
     setSpelling("");

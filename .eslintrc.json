@@ -1,3 +1,7 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": "next/core-web-vitals",
+  "rules": {
+    // Other rules...
+    "max-warnings": ["warn", { "max": 0 }] // or set it to a higher value than 0
+  }
 }
