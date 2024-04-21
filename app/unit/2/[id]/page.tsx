@@ -8,7 +8,7 @@ import left_arrow from "@/public/icons/left-arrow.svg";
 import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
 
-export const Page = ({ params }: { params: { id: string } }) => {
+export default function Page({ params }: { params: { id: string } }) {
   const unit = unitData.find((lesson) => lesson.lesson === params.id);
 
   if (!unit) return <div>Lesson not found</div>;
@@ -131,7 +131,7 @@ export const Page = ({ params }: { params: { id: string } }) => {
       )}
     </>
   );
-};
+}
 
 interface LearningCardProps {
   character: string;
@@ -427,5 +427,3 @@ const InputCard = ({ onClick, setNameInput }: InputCardProps) => {
     </div>
   );
 };
-
-export default Page;

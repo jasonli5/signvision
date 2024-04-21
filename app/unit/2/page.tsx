@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export const Page = () => {
+export default function Page() {
   return (
     <>
       <div className="title-section flex flex-col justify-center items-center mb-10">
@@ -24,7 +24,7 @@ export const Page = () => {
       </Link>
     </>
   );
-};
+}
 
 interface LessonButtonProps {
   lesson: string;
@@ -42,5 +42,3 @@ const LessonButton = ({ lesson, description }: LessonButtonProps) => {
     </Link>
   );
 };
-
-export default Page;
