@@ -10,7 +10,7 @@ const PlayfairDisplayFont = Playfair_Display({
 export default function Page() {
   return (
     <>
-      <div className="flex flex-col gap-4 justify-center items-center mb-12 mt-4">
+      <div className="flex flex-col gap-4 justify-center items-center mb-12 mt-4 text-slate-700">
         <h1 className="text-4xl font-bold text-center">
           American Sign Language
         </h1>

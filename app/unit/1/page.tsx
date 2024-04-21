@@ -11,14 +11,14 @@ export default function Page() {
   return (
     <>
       <div className="title-section flex flex-col justify-center items-center mb-10">
-        <div className="mb-8 flex justify-center flex-col items-center">
+        <div className="mb-8 flex justify-center flex-col items-center text-slate-700">
           <h1 className="text-4xl font-bold text-center mb-1">
             Beginner Level
           </h1>
           <p className="text-xl">Fingerspelling</p>
         </div>
         <p
-          className={`${PlayfairDisplayFont.className} text-lg text-center w-[70%]`}
+          className={`${PlayfairDisplayFont.className} text-slate-700 text-lg text-center w-[70%]`}
         >
           Fingerspelling is a method of communicating visually using hand
           gestures to represent letters of the alphabet. It's commonly used by

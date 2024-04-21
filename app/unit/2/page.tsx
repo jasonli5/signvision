@@ -11,7 +11,7 @@ export default function Page() {
   return (
     <>
       <div className="title-section flex flex-col justify-center items-center mb-10">
-        <div className="mb-8 flex justify-center flex-col items-center">
+        <div className="mb-8 flex justify-center flex-col items-center text-slate-700">
           <h1 className="text-4xl font-bold text-center mb-1">
             Advanced Level
           </h1>
@@ -19,7 +19,7 @@ export default function Page() {
         </div>
 
         <p
-          className={`${PlayfairDisplayFont.className} text-lg text-center w-[70%]`}
+          className={`${PlayfairDisplayFont.className} text-slate-700 text-lg text-center w-[70%]`}
         >
           Welcome to the Advanced Level of American Sign Language! In this
           level, you will learn more complex signs and phrases to help you
