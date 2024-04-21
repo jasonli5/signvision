@@ -1,0 +1,229 @@
+[
+  {
+    "lesson": "1",
+    "title": "ABCDE",
+    "description": "This is a test lesson",
+    "content": [
+      {
+        "type": "learn",
+        "character": "A",
+        "description": "Make a fist with your thumb sticking up over the side of your fingers."
+      },
+      { "type": "attempt", "character": "A" },
+      {
+        "type": "learn",
+        "character": "B",
+        "description": "Keep your fingers straight and together while your thumb bends across your palm."
+      },
+      { "type": "attempt", "character": "B" },
+      {
+        "type": "learn",
+        "character": "C",
+        "description": "Shape your hand to form a \"C\"."
+      },
+      { "type": "attempt", "character": "C" },
+      {
+        "type": "learn",
+        "character": "D",
+        "description": "Raise your index finger while forming the rest of your fingers into a circle."
+      },
+      { "type": "attempt", "character": "D" },
+      {
+        "type": "learn",
+        "character": "E",
+        "description": "Curl all of your fingertips onto the base of your thumb."
+      },
+      { "type": "attempt", "character": "E" },
+      { "type": "finish" }
+    ]
+  },
+  {
+    "lesson": "2",
+    "title": "FGHIJ",
+    "description": "This is a test lesson",
+    "content": [
+      {
+        "type": "learn",
+        "character": "F",
+        "description": "Touch your thumb and index finger together, keeping the other fingers straight up."
+      },
+      { "type": "attempt", "character": "F" },
+      {
+        "type": "learn",
+        "character": "G",
+        "description": "Extend your index finger and thumb, spreading them apart."
+      },
+      { "type": "attempt", "character": "G" },
+      {
+        "type": "learn",
+        "character": "H",
+        "description": "Extend your index and middle fingers while keeping them together; tuck your other fingers into your palm."
+      },
+      { "type": "attempt", "character": "H" },
+      {
+        "type": "learn",
+        "character": "I",
+        "description": "Lift your pinky finger while folding the rest of your fingers down."
+      },
+      { "type": "attempt", "character": "I" },
+      {
+        "type": "learn",
+        "character": "J",
+        "description": "Make the sign for \"I\", then draw a \"J\" in the air with your pinky."
+      },
+      { "type": "attempt", "character": "J" },
+      { "type": "finish" }
+    ]
+  },
+  {
+    "lesson": "3",
+    "title": "KLMNO",
+    "description": "This is a test lesson",
+    "content": [
+      {
+        "type": "learn",
+        "character": "K",
+        "description": "Raise your index and middle fingers and tuck your thumb in between them."
+      },
+      { "type": "attempt", "character": "K" },
+      {
+        "type": "learn",
+        "character": "L",
+        "description": "Extend your thumb and index finger to make an \"L\" shape."
+      },
+      { "type": "attempt", "character": "L" },
+      {
+        "type": "learn",
+        "character": "M",
+        "description": "Tuck your thumb beneath your three fingers (index, middle, and ring)."
+      },
+      { "type": "attempt", "character": "M" },
+      {
+        "type": "learn",
+        "character": "N",
+        "description": "Tuck your thumb under your two fingers (index and middle)."
+      },
+      { "type": "attempt", "character": "N" },
+      {
+        "type": "learn",
+        "character": "O",
+        "description": "Make an \"O\" shape with all your fingers rounded and touching."
+      },
+      { "type": "attempt", "character": "O" },
+      { "type": "finish" }
+    ]
+  },
+  {
+    "lesson": "4",
+    "title": "PQRST",
+    "description": "This is a test lesson",
+    "content": [
+      {
+        "type": "learn",
+        "character": "P",
+        "description": "Form the letter \"K\" and then turn your hand sideways."
+      },
+      { "type": "attempt", "character": "P" },
+      {
+        "type": "learn",
+        "character": "Q",
+        "description": "Form the letter \"G\" and then turn your hand sideways."
+      },
+      { "type": "attempt", "character": "Q" },
+      {
+        "type": "learn",
+        "character": "R",
+        "description": "Cross your fingers (index over middle)."
+      },
+      { "type": "attempt", "character": "R" },
+      {
+        "type": "learn",
+        "character": "S",
+        "description": "Make a fist with your thumb in front of your fingers."
+      },
+      { "type": "attempt", "character": "S" },
+      {
+        "type": "learn",
+        "character": "T",
+        "description": "Tuck your thumb between your index and middle finger."
+      },
+      { "type": "attempt", "character": "T" },
+      { "type": "finish" }
+    ]
+  },
+  {
+    "lesson": "5",
+    "title": "UVWXYZ",
+    "description": "This is a test lesson",
+    "content": [
+      {
+        "type": "learn",
+        "character": "U",
+        "description": "Extend your index and middle fingers while keeping them together; curl your other fingers."
+      },
+      { "type": "attempt", "character": "U" },
+      {
+        "type": "learn",
+        "character": "V",
+        "description": "Spread your index and middle fingers into a \"V\" shape."
+      },
+      { "type": "attempt", "character": "V" },
+      {
+        "type": "learn",
+        "character": "W",
+        "description": "Raise your index, middle, and ring fingers while keeping them spread apart."
+      },
+      { "type": "attempt", "character": "W" },
+      {
+        "type": "learn",
+        "character": "X",
+        "description": "Hook your index finger while curling the rest of your fingers."
+      },
+      { "type": "attempt", "character": "X" },
+      {
+        "type": "learn",
+        "character": "Y",
+        "description": "Extend your thumb and pinky finger, keeping your other fingers folded."
+      },
+      { "type": "attempt", "character": "Y" },
+      {
+        "type": "learn",
+        "character": "Z",
+        "description": "Draw a \"Z\" in the air with your index finger."
+      },
+      { "type": "attempt", "character": "Z" },
+      { "type": "finish" }
+    ]
+  },
+  {
+    "lesson": "challenge",
+    "title": "Challenge",
+    "description": "This is a challenge",
+    "content": [
+      {
+        "type": "challenge",
+        "character": "",
+        "description": ""
+      },
+      {
+        "type": "spell",
+        "character": "BAD",
+        "description": ""
+      },
+      {
+        "type": "spell",
+        "character": "BALL",
+        "description": ""
+      },
+      {
+        "type": "spell_name",
+        "character": "",
+        "description": ""
+      },
+      { "type": "spell", "character": "", "description": "" },
+      {
+        "type": "finish"
+      }
+    ]
+  }
+]
