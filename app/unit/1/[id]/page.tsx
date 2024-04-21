@@ -8,7 +8,7 @@ import left_arrow from "@/public/icons/left-arrow.svg";
 import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
 
-export default function Page({ params }: { params: { id: string } }) {
+export default function Page({ params }: { params: { slug: string } }) {
   const [currentStep, setCurrentStep] = useState(0);
 
   const [spelling, setSpelling] = useState<string>("");
@@ -16,7 +16,7 @@ export default function Page({ params }: { params: { id: string } }) {
 
   const [nameInput, setNameInput] = useState<string>("");
 
-  const unit = unitData.find((lesson) => lesson.lesson === params.id);
+  const unit = unitData.find((lesson) => lesson.lesson === params.slug);
 
   const content = unit?.content[currentStep];
   const contentType = content?.type;
