@@ -26,7 +26,7 @@ interface UnitButtonProps {
   description?: string;
 }
 
-export const UnitButton = ({ unit, description }: UnitButtonProps) => {
+const UnitButton = ({ unit, description }: UnitButtonProps) => {
   return (
     <Link
       href={`unit/${unit}`}
