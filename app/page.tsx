@@ -1,6 +1,6 @@
 import globe from "@/public/icons/globe_blue.svg";
 import down from "@/public/icons/down.svg";
-import { Playfair_Display } from "next/font/google";
+import { Playfair_Display, Inter, Poppins } from "next/font/google";
 import Link from "next/link";
 
 const playfairFont = Playfair_Display({
@@ -8,6 +8,8 @@ const playfairFont = Playfair_Display({
   style: ["italic", "normal"],
   weight: ["400", "700"],
 });
+
+const poppins = Poppins({ subsets: ["latin"], weight: ["400", "600", "700"] });
 
 export default function Home() {
   return (
@@ -19,26 +21,32 @@ export default function Home() {
           className="absolute -top-[200px] right-0 -z-10"
         />
       </Link>
-      <div className={`${playfairFont.className} flex gap-6 flex-col`}>
-        <h1 className="text-6xl font-bold italic" style={{ color: "#00A3DC" }}>
-          Sign Vision
+      <div className={`${poppins.className} flex gap-6 flex-col m-5`}>
+        <h1 className="text-7xl font-bold" style={{ color: "#00A3DC" }}>
+          SignVision
         </h1>
-        <p className="text-3xl w-[300px] italic font-normal">
+        <p
+          className={`${playfairFont.className} text-3xl w-[320px] font-normal text-slate-700`}
+        >
           Making sign language easier to learn.
         </p>
       </div>
       <div className="flex items-center gap-12 flex-col mt-20">
         <Link
           href="/unit"
-          className="bg-slate-700 hover:bg-slate-900 w-[200px] text-center px-4 py-3 rounded-full text-white mt-12 font-bold text-3xl"
+          className={`${poppins.className} bg-slate-700 hover:bg-slate-900 w-[200px] text-center px-4 py-3 rounded-full text-white mt-12 font-semibold text-3xl`}
         >
           Let's go
         </Link>
         <img src={down.src} alt="Down arrow" className="w-24" />
       </div>
       <div className="flex flex-col gap-5 mt-24">
-        <h2 className="text-3xl font-bold">What we're here for</h2>
-        <div className="w-[50%]">
+        <h2
+          className={`${poppins.className} text-3xl font-semibold text-slate-700`}
+        >
+          What we're here for
+        </h2>
+        <div className={`${playfairFont.className} w-[50%]`}>
           <p className="mb-6">
             We developed a software to teach people how to use sign language
             with the help of AI primarily for people struggling to learn. Those

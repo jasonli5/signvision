@@ -1,4 +1,11 @@
+import { Playfair_Display } from "next/font/google";
 import Link from "next/link";
+
+const PlayfairDisplayFont = Playfair_Display({
+  subsets: ["latin"],
+  style: ["normal"],
+  weight: ["400", "700"],
+});
 
 export default function Page() {
   return (
@@ -10,7 +17,9 @@ export default function Page() {
           </h1>
           <p className="text-xl">Fingerspelling</p>
         </div>
-        <p className="text-center w-[70%]">
+        <p
+          className={`${PlayfairDisplayFont.className} text-lg text-center w-[70%]`}
+        >
           Fingerspelling is a method of communicating visually using hand
           gestures to represent letters of the alphabet. It's commonly used by
           individuals who are deaf or hard of hearing to spell out words or

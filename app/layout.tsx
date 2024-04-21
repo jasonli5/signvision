@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Playfair_Display, Poppins } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header";
 import footer_icon from "@/public/icons/footer.svg";
@@ -11,6 +11,14 @@ export const metadata: Metadata = {
   description: "An application for learning sign language.",
 };
 
+const playfairFont = Playfair_Display({
+  subsets: ["latin"],
+  style: ["italic", "normal"],
+  weight: ["400", "700"],
+});
+
+const poppins = Poppins({ subsets: ["latin"], weight: ["400", "600", "700"] });
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -18,7 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={poppins.className}>
         <Header />
         <main className="w-screen p-10 flex flex-col justify-center">
           {children}

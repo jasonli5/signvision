@@ -1,4 +1,11 @@
+import { Playfair_Display } from "next/font/google";
 import Link from "next/link";
+
+const PlayfairDisplayFont = Playfair_Display({
+  subsets: ["latin"],
+  style: ["normal"],
+  weight: ["400", "700"],
+});
 
 export default function Page() {
   return (
@@ -7,7 +14,9 @@ export default function Page() {
         <h1 className="text-4xl font-bold text-center">
           American Sign Language
         </h1>
-        <p className="w-full max-w-[80%] text-[20px] text-center">
+        <p
+          className={`${PlayfairDisplayFont.className} w-full max-w-[65%] text-[20px] text-center`}
+        >
           American Sign Language is hard. So we’ve made it easier for you by
           breaking it into levels. However, if you already know some ASL, you
           can skip ahead.

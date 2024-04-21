@@ -1,11 +1,26 @@
+import { Playfair_Display } from "next/font/google";
 import Link from "next/link";
+
+const PlayfairDisplayFont = Playfair_Display({
+  subsets: ["latin"],
+  style: ["normal"],
+  weight: ["400", "700"],
+});
 
 export default function Page() {
   return (
     <>
       <div className="title-section flex flex-col justify-center items-center mb-10">
-        <h1 className="text-4xl font-bold text-center mb-10">Advanced Level</h1>
-        <p className="text-center w-[70%]">
+        <div className="mb-8 flex justify-center flex-col items-center">
+          <h1 className="text-4xl font-bold text-center mb-1">
+            Advanced Level
+          </h1>
+          <p className="text-xl">Words, phrases, and sentences</p>
+        </div>
+
+        <p
+          className={`${PlayfairDisplayFont.className} text-lg text-center w-[70%]`}
+        >
           Welcome to the Advanced Level of American Sign Language! In this
           level, you will learn more complex signs and phrases to help you
           communicate with others who are deaf or hard of hearing. Let's get
